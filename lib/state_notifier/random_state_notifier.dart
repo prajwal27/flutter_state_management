@@ -21,20 +21,15 @@ class RandomStateNotifier extends StateNotifier<RandomState> {
 
   RandomStateNotifier() : super(RandomState());
 
-  int? get generatedNumber => state.generatedNumber;
-
   void setMin(int x) {
-    print("setting min");
-    state.copyWith(min: x,generatedNumber:null);
+    state = state.copyWith(min: x,generatedNumber:null);
   }
 
   void setMax(int x) {
-    print("setting Max ${state.min}");
-    state.copyWith(max: x,generatedNumber:null);
+    state = state.copyWith(max: x,generatedNumber:null);
   }
 
   void generateRandomNumber() {
-    print("1");
-    state.copyWith(generatedNumber:state.min + _random.nextInt(state.max + 1 - state.min));
+    state = state.copyWith(generatedNumber:state.min + _random.nextInt(state.max + 1 - state.min));
   }
 }

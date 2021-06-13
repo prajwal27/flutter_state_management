@@ -28,10 +28,7 @@ dependencies:
       url: https://github.com/rrousselGit/river_pod.git
       ref: rfc-335
       path: packages/flutter_riverpod
-  cupertino_icons: ^1.0.2
-  flutter_hooks: ^0.17.0
   freezed_annotation: ^0.14.2
-  provider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
